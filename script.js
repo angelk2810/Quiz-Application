@@ -350,9 +350,3 @@ function restartQuiz() {
   switchPanel("welcome");
 }
 
-
-/* function restartQuiz() {
-  clearTimer();
-  reviewListEl.innerHTML = "";
-  switchPanel("welcome");
-}*/

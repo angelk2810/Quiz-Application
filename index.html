@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>QuickQuiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Welcome Page -->
+    <section id="welcome" class="panel active" aria-label="Welcome panel">
+      <div class="welcome-container card glass fade-in">
+        <h1 class="app-title animate-title">QuickQuiz</h1>
+        <p class="app-subtitle">Test your knowledge. Beat the clock.</p>
+        <button id="startBtn" class="btn primary lift" type="button">
+          Start Quiz
+        </button>
+        <p class="criteria-note">
+          Scoring Criteria: +1 correct • −0.25 wrong • 0 skipped
+        </p>
+      </div>
+    </section>
+
+    <!-- Quiz Panel -->
+    <section id="quiz" class="panel" aria-label="Quiz panel">
+      <div class="quiz-container card glass slide-up">
+        <div class="quiz-meta">
+          <div class="timer pill" aria-live="polite" aria-atomic="true">
+            <span class="timer-icon" aria-hidden="true">⏱</span>
+            <span id="time">00</span>s
+          </div>
+        </div>
+
+        <div class="progress-wrap" aria-label="Quiz progress">
+          <div id="progressBar" class="progress-bar">
+            <span id="progressIndicator" class="progress-indicator"></span>
+          </div>
+          <div class="progress-text">
+            Question <span id="progressCount">0</span> of
+            <span id="totalCount">0</span>
+          </div>
+        </div>
+
+        <article class="question-card card glass" aria-live="polite">
+          <h2 id="questionText" class="question-text">Loading question…</h2>
+          <div class="options" role="group" aria-label="Answer options">
+            <!-- Buttons injected by JS -->
+          </div>
+        </article>
+
+        <div class="controls">
+          <button id="nextBtn" class="btn next ghost" type="button" aria-label="Next question">
+            Next
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Result Panel -->
+    <section id="result" class="panel" aria-label="Result panel">
+      <div class="result-container card glass slide-up">
+        <div class="result-summary">
+          <h2 class="result-title">Quiz Completed</h2>
+          <p class="final-score">
+            Final Score:
+            <strong id="finalScore">0</strong>
+          </p>
+          <p class="result-breakdown">
+            Correct: <strong id="correctCount">0</strong> • Incorrect:
+            <strong id="incorrectCount">0</strong> • Skipped:
+            <strong id="skippedCount">0</strong>
+          </p>
+          <div class="result-actions">
+            <button id="reviewBtn" class="btn primary" type="button">Review Answers</button>
+            <button id="restartBtn" class="btn ghost" type="button">Restart Quiz</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Review Panel -->
+    <section id="review" class="panel" aria-label="Review panel">
+      <div class="review-container card glass slide-up">
+        <header class="review-header">
+          <h2>Answer Review</h2>
+          <p class="review-sub">See what you picked and the correct answers.</p>
+        </header>
+
+        <div id="reviewList" class="review-list" aria-live="polite">
+          <!-- Review items injected by JS -->
+        </div>
+
+        <div class="review-actions">
+          <button id="restartBtn2" class="btn ghost" type="button">Restart Quiz</button>
+          <button id="backToResultsBtn" class="btn" type="button">Back to Results</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="app-footer" role="contentinfo">
+      <small>Scoring Criteria: +1 correct • −0.25 wrong • 0 skipped</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

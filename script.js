@@ -349,3 +349,10 @@ function restartQuiz() {
   reviewListEl.innerHTML = "";
   switchPanel("welcome");
 }
+
+
+/* function restartQuiz() {
+  clearTimer();
+  reviewListEl.innerHTML = "";
+  switchPanel("welcome");
+}*/
